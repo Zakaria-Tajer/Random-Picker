@@ -104,9 +104,8 @@ body {
     position: absolute;
     bottom: 40px;
 }
-.sorry_for_me {
+.sorryForMe {
     font-family: '3Dumb', sans-serif;
-    width: 100%;
 }
 .lucky {
     margin: 4% auto;

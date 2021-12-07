@@ -61,6 +61,7 @@ function typing(){
                 const Hover = document.createElement('h2')
                 const Person = document.createElement('h1')
                 const sorry = document.createElement('h2')
+                const sorryForMe = document.createElement('h2')
                 //container of all divs and h1/h2 elements
                 container.appendChild(flip_card)
                 flip_card.appendChild(flip_card_inner)
@@ -69,6 +70,7 @@ function typing(){
                 flip_card_inner.appendChild(flip_card_back)
                 flip_card_back.appendChild(Person)
                 flip_card_back.appendChild(sorry)
+                flip_card_back.appendChild(sorryForMe)
                 ///Creating Class for styling
         
                 container.classList.add('container')
@@ -79,15 +81,24 @@ function typing(){
                 flip_card_back.classList.add('flip-card-back')
                 Person.classList.add('Person')
                 sorry.classList.add('srry')
+                sorryForMe.classList.add('sorryForMe')
         
                 sorry.textContent = "Im Not Even Sorry"
 
                 let random = List[Math.floor(Math.random()*List.length)]
                 Person.textContent = random
+
+                if(random==='Zakaria Tajer'){
+
+                }
             }else {
                 alert("ENter a number a less or equal to 24")
                 break
         }
+
+        
+
+
 
     function reset(){
         document.getElementById('input_name').value = ""
