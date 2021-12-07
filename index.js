@@ -1,0 +1,99 @@
+const lucky = document.querySelector('.lucky')
+const btn = document.querySelector('.numberOfNames')
+const container = document.querySelector('.container')
+const NamesPicker = document.querySelector('.NamesPicker')
+const h2_containers = document.querySelector('.h2-containers')
+
+const List = [
+    'Hamza Gassai',
+    'Mehdi LAGDIMI',
+    'Ibrahim Benjarmoun',
+    'Omar Baabouj',
+    'Mohamed Ibnahmad',
+    'HSSINI	Lhoussaine',
+    'Fatma Karkach',
+    'Abderrahmane Dachoucha',
+    'Rachid	NAIM',
+    'Elmahdi Gliouine',
+    'Zineb Aboumejd',
+    'MOHAMED BALIZI',
+    'reda bensaltana',
+    'Mohammed amine	Elazzab',
+    'Yassine Touti',
+    'Abdelghafour ETTAQUI',
+    'Fahd Roussafi',
+    'Wafae Belgazzar',
+    'Zakaria Tajer',
+    'Sifaw Boumezough',
+    'Nadia Elhadri',
+    'SOUMAYA AMGHAR',
+    'MOHAMMED OUASMINE',
+    'imane moultamiss'
+]
+
+NamesPicker.addEventListener('click',Listing)
+btn.addEventListener('click', typing)
+
+function Listing(){
+    for (let i = 0;i < List.length; i++) {
+       const names = document.createElement('h2')
+       h2_containers.appendChild(names)
+       names.textContent = List[i]
+
+       names.classList.add('h2-Elements')
+
+    }
+}
+
+
+function typing(){
+    const input_field = document.getElementById('input_name').value
+    ///Creating Cards
+   
+        for (let i = 0; i < input_field; i++) {
+            reset()
+            console.log(input_field);
+            if(input_field<25){
+                const flip_card = document.createElement('div')
+                const flip_card_inner = document.createElement('div')
+                const flip_card_front = document.createElement('div')
+                const flip_card_back = document.createElement('div')
+                const Hover = document.createElement('h2')
+                const Person = document.createElement('h1')
+                const sorry = document.createElement('h2')
+                //container of all divs and h1/h2 elements
+                container.appendChild(flip_card)
+                flip_card.appendChild(flip_card_inner)
+                flip_card_inner.appendChild(flip_card_front)
+                flip_card_front.appendChild(Hover)
+                flip_card_inner.appendChild(flip_card_back)
+                flip_card_back.appendChild(Person)
+                flip_card_back.appendChild(sorry)
+                ///Creating Class for styling
+        
+                container.classList.add('container')
+                flip_card.classList.add('flip-card')
+                flip_card_inner.classList.add('flip-card-inner')
+                flip_card_front.classList.add('flip-card-front')
+                Hover.classList.add('Hover')
+                flip_card_back.classList.add('flip-card-back')
+                Person.classList.add('Person')
+                sorry.classList.add('srry')
+        
+                sorry.textContent = "Im Not Even Sorry"
+
+                let random = List[Math.floor(Math.random()*List.length)]
+                Person.textContent = random
+            }else {
+                alert("ENter a number a less or equal to 24")
+                break
+        }
+
+    function reset(){
+        document.getElementById('input_name').value = ""
+    }
+            }
+            
+
+    
+}
