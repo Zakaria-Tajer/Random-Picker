@@ -5,23 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="dist/clipboard.min.js"></script>
     <title>Alan Turing Name Picker</title>
 </head>
 <body>
     <h1 class="Welcome-Sign">Welcome To Random Persons Picker</h1>
     <h1 class="lucky"></h1> 
-    <!-- <div class="idk"></div> -->
 
     <div class="input-field">
-      <input id="input_name" placeholder="Enter Number of Name" type="number" required>
-      <button class="numberOfNames">Pick a Number</button>
-      <button class="NamesPicker">Pick a Names</button>
+        <input id="input_name" placeholder="Enter Number of Name" type="number" required>
+        <button class="numberOfNames">Pick a Number</button>
+        <h2 id="copied" style="display: none; position: absolute; left: 60%; top: 12%;" >Copied!!</h2>
+        <button id="copyButton" data-clipboard-target=".h2-containers" style="display: none;">Copy</button>
+        
+        <script>new ClipboardJS('#copyButton')</script>
+        <div class="gene" ></div>
   </div>
 
   <div class="h2-containers"></div>
 
     <div class="container"></div>
-    
+    <!-- <div class="noti"></div> -->
     <script src="index.js"> </script>
 </body>
 </html>

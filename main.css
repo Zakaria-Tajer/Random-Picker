@@ -85,7 +85,7 @@ body {
 
     
 } */
-.numberOfNames,.NamesPicker{
+.numberOfNames,.NamesPicker,#copyButton{
     padding: 10px 30px;
     border: none;
     margin-left: 15px;
@@ -107,6 +107,7 @@ body {
 .sorryForMe {
     font-family: '3Dumb', sans-serif;
 }
+
 .lucky {
     margin: 4% auto;
     text-align: center;
@@ -151,4 +152,17 @@ body {
 .h2-Elements {
     display: flex;
     justify-content: center;
+}
+
+#secondCopy{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#copied {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 10px;
+    transform: translateY(180%);
+    color: white;
+    font-size: 15px;
 }
